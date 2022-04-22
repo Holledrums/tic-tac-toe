@@ -7,7 +7,7 @@
 // 4: Unentschieden
 
 let gameState = 0;
-const fields = [0, 2, 0, 1, 0, 2, 0, 0, 0];
+const fields = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const drawField = () => {
   fields.forEach((field, index) => {
@@ -35,7 +35,15 @@ const onNewGame = () => {
 };
 const onCellClick = (e) => {
   e.target;
-  console.log(e.target.id);
+  console.log("Cell clicked", e.target.id);
+  // setp1:  fieldsarray aktualisieren
+
+  if (gameState > 1) return;
+  fields[e.target.id - 1] = gameState + 1;
+  gameState = gameState === 0 ? 1 : 0;
+
+  // step2: drawField aufrufen
+  drawField();
 };
 
 window.addEventListener("DOMContentLoaded", () => {
