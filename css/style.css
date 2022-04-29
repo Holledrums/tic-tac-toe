@@ -1,10 +1,15 @@
 body {
   height: 100vh;
+  background-color: #189ab4;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: sans-serif;
+}
+
+h1 {
+  color: #05445e;
 }
 
 .field-container {
@@ -14,6 +19,8 @@ body {
 }
 .cell {
   cursor: pointer;
+  color: #05445e;
+  background-color: #d4f1f4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,18 +32,18 @@ body {
 
 button {
   border: none;
-  background-color: lightgray;
+  background-color: #75e6da;
 
   padding: 20px 60px;
   margin: 30px;
-  color: white;
+  color: #05445e;
   font-size: 1.2rem;
 }
 button:enabled {
-  background-color: mediumseagreen;
+  background-color: #75e6da;
 }
 button:active {
-  background-color: green;
+  background-color: #d4f1f4;
 }
 #game-state {
   padding: 20px;
